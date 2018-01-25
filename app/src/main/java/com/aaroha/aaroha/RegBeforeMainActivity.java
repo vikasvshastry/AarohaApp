@@ -30,8 +30,8 @@ public class RegBeforeMainActivity extends AppCompatActivity implements View.OnC
     private ProgressDialog progressDialog;
 
     private FirebaseAuth firebaseAuth;
-    //private Firebase rootRef = new Firebase("https://chatterbox-b475f.firebaseio.com/");
-    //private String uid;
+    private Firebase rootRef = new Firebase("https://aaroha-50e98.firebaseio.com/");
+    private String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +98,7 @@ public class RegBeforeMainActivity extends AppCompatActivity implements View.OnC
         progressDialog.setMessage("Registering...");
         progressDialog.show();
 
-        /*firebaseAuth.createUserWithEmailAndPassword(email,password)
+        firebaseAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -110,7 +110,6 @@ public class RegBeforeMainActivity extends AppCompatActivity implements View.OnC
                             final users newUser = new users(name,email,uid,password,Phno);
 
                             rootRef.child("users").child(uid).setValue(newUser);
-                            rootRef.child("registered").child(uid).setValue(Phno);
 
                             progressDialog.dismiss();
                             Toast.makeText(RegBeforeMainActivity.this,"Successfully Registered", Toast.LENGTH_SHORT).show();
@@ -132,7 +131,7 @@ public class RegBeforeMainActivity extends AppCompatActivity implements View.OnC
                             Toast.makeText(RegBeforeMainActivity.this,"Registration Failed", Toast.LENGTH_SHORT).show();
                         }
                     }
-                });*/
+                });
     }
 
     @Override

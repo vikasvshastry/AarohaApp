@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser() == null){
             //Start login activity
             finish();
             startActivity(new Intent(this, LogBeforeMainActivity.class));
             return;
-        }*/
+        }
         setContentView(R.layout.activity_main);
 
         Toolbar mToolbar = findViewById(R.id.toolbar);
